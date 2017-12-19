@@ -1,0 +1,27 @@
+{
+  "name": "plopper",
+  "version": "0.1.0",
+  "description": "A micro-generator for your React Redux App",
+  "bin": {
+    "plopper": "./index.js"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "github.com/howlowck/plop-react-redux"
+  },
+  "keywords": [
+    "generator",
+    "react",
+    "redux",
+    "plop"
+  ],
+  "author": "Hao Luo",
+  "license": "MIT",
+  "dependencies": {
+    "chalk": "^2.3.0",
+    "node-plop": "^0.9.0"
+  }
+}
