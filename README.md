@@ -10,6 +10,17 @@ Then
 
 `npx plopper`
 
+## `.plopper.json` file
+```json
+{
+    "bypass": {
+        "component": {
+            "useCssModule": "true"
+        }
+    }
+}
+```
+
 ## Thanks
 This project is based on [Plop](https://github.com/amwmedia/plop)
 

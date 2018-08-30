@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import PropTypes from 'prop-types'
 import classNames from 'classnames'
-import styles from './{{ properCase name}}.{{cssExt}}'
+import styles from './{{ properCase name}}.{{#ifEqual useCssModule true }}module.{{/ifEqual}}{{cssExt}}'
 
 class {{ properCase name}} extends Component {
   render () {

@@ -151,6 +151,13 @@ module.exports = function (plop) {
         default: true
       },
       {
+        type: 'confirm',
+        name: 'useCssModule',
+        message: 'Is this CSS using a Css Module?',
+        default: true,
+        bypass: () => 'true'
+      },
+      {
         type: 'input',
         name: 'cssExt',
         message: 'what is the css file extension?',
@@ -161,9 +168,7 @@ module.exports = function (plop) {
       var actions = []
       var componentPath = getProjectPath() + '/src/components/{{subPath subpath}}{{properCase name}}'
       actions.push(function (answers) {
-        // process.chdir(plop.getPlopfilePath())
         process.chdir(getProjectPath())
-        console.log(getProjectPath())
         var fs = require('fs')
         componentPath = plop.renderString(componentPath, answers)
         addDirectory(componentPath, fs)
@@ -203,9 +208,10 @@ module.exports = function (plop) {
         })
       }
 
+      const moduleName = answers.useCssModule ? 'module.' : ''
       actions.push({
         type: 'add',
-        path: getProjectPath() + '/src/components/{{subPath subpath}}{{ properCase name}}/{{properCase name}}.' + answers.cssExt,
+        path: `${getProjectPath()}/src/components/{{subPath subpath}}{{ properCase name}}/{{properCase name}}.${moduleName}${answers.cssExt}`,
         templateFile: '.plop/styles.txt'
       })
 

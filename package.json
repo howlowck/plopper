@@ -22,6 +22,7 @@
   "license": "MIT",
   "dependencies": {
     "chalk": "^2.3.0",
+    "findup-sync": "^2.0.0",
     "node-plop": "^0.9.0"
   }
 }
